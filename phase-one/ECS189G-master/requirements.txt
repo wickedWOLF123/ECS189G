@@ -1,0 +1,22 @@
+# Core ML/DL frameworks
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.21.0
+
+# Data manipulation and visualization
+matplotlib>=3.5.0
+Pillow>=9.0.0
+
+# Progress bars and utilities
+tqdm>=4.64.0
+
+# Optional: For better performance with CUDA
+# Uncomment if you have CUDA-capable GPU
+# torch-audio>=2.0.0
+
+# Development and jupyter support (optional)
+jupyter>=1.0.0
+ipython>=8.0.0
+
+# For reproducibility
+scipy>=1.9.0 
