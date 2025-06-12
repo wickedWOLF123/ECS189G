@@ -1,0 +1,24 @@
+batch_size: 128
+num_epochs: 200   # Added for consistency with training scripts
+epochs: 200
+learning_rate: 3.0e-4  # Added for training scripts
+optim:
+  name: adamw
+  lr: 3.0e-4
+  weight_decay: 1.0e-4
+
+# Teacher models to use
+teachers: ['densenet', 'vgg', 'resnet']
+teacher_paths:
+  densenet: teachers/best_models/densenet121_best.pth
+  vgg16: teachers/best_models/vgg16_best.pth
+  vgg19: teachers/best_models/vgg19_best.pth
+  resnet: teachers/best_models/resnet110_best.pth
+tau: 0.2          # softmax temperature for teacher weights
+T_kd: 3.0         # KD logit temperature
+ce_weight: 0.3    # alpha in L = (1-alpha)*KD + alpha*CE
+
+# Enhanced distillation with attribution alignment
+use_enhanced_loss: true
+map_weight: 0.1   # β parameter for attribution map alignment
+device: cuda

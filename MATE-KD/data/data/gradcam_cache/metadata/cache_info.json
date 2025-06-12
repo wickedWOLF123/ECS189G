@@ -1,0 +1,56 @@
+{
+  "created_at": "2025-06-08T19:45:23.043786",
+  "dataset": "CIFAR-10",
+  "dataset_info": {
+    "train_samples": 50000,
+    "test_samples": 10000,
+    "num_classes": 10,
+    "class_names": [
+      "airplane",
+      "automobile",
+      "bird",
+      "cat",
+      "deer",
+      "dog",
+      "frog",
+      "horse",
+      "ship",
+      "truck"
+    ],
+    "dataset_hash": "5de7f901e19b26e8f1fc51321d077077"
+  },
+  "models": {
+    "densenet": {
+      "name": "DenseNet-121",
+      "path": "teachers/best_models/densenet121_best.pth",
+      "description": "Dense connections between layers"
+    },
+    "vgg16": {
+      "name": "VGG-16",
+      "path": "teachers/best_models/vgg16_best.pth",
+      "description": "16-layer VGG with batch normalization"
+    },
+    "vgg19": {
+      "name": "VGG-19",
+      "path": "teachers/best_models/vgg19_best.pth",
+      "description": "19-layer VGG with batch normalization"
+    },
+    "resnet": {
+      "name": "ResNet-110",
+      "path": "teachers/best_models/resnet110_best.pth",
+      "description": "110-layer ResNet with residual connections"
+    }
+  },
+  "processing_stats": {},
+  "cache_format": {
+    "file_format": "npz (numpy compressed)",
+    "heatmap_dtype": "float16",
+    "heatmap_shape": "[1, 32, 32]",
+    "naming_convention": "idx_{index:05d}_class_{label}.npz"
+  },
+  "directory_structure": {
+    "train/": "Training set heatmaps",
+    "test/": "Test set heatmaps",
+    "metadata/": "Cache metadata and statistics"
+  }
+}
